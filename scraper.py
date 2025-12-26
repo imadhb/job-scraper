@@ -1,6 +1,7 @@
 import requests
 
-from bs4 import BeautifulSoup
+url = "https://google.com"
 
-url = "https://example.com"
-page = requests.get(url)
+response  = requests.get(url, timeout=20)
+html = response.text
+print(html[:300])
